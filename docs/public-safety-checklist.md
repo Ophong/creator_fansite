@@ -23,6 +23,7 @@ This checklist defines when the 팬사이트 demo is safe to publish as a public
 - [x] No production API dumps.
 - [x] No access tokens, cookies, server IPs, private admin identifiers, or write-capable endpoints.
 - [x] Schedule auth fixture returns logged-out/read-only state.
+- [x] The public export does not expose working SOOP, YouTube, X, or SOOP VOD links.
 
 ## Repository Safety
 
@@ -31,6 +32,8 @@ This checklist defines when the 팬사이트 demo is safe to publish as a public
 - [x] No package install is required to view the published demo.
 - [x] No service-role key placeholder is included.
 - [x] No DigitalOcean token placeholder is included.
+
+After creating a new static export, run `node scripts/sanitize-external-links.mjs` before publishing so external platform links are removed again.
 
 ## If Live Data Is Added Later
 
